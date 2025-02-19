@@ -1,3 +1,15 @@
 git add .  # Stage all changes
 git commit -m "Your commit message"  # Commit changes
 git push origin main  # Push to the main branch
+
+
+git remote -v
+
+git config --global pack.windowMemory 256m
+git config --global pack.packSizeLimit 256m
+git config --global pack.threads 1
+git gc --aggressive
+git push origin main  # Replace 'main' with your branch name
+
+git config --global http.postBuffer 524288000  # Set buffer to 500MB
+git push origin main  # Replace 'main' with your branch name
